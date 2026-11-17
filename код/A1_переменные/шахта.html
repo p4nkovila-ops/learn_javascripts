@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Шахта</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1, задача «Шахта»; первые 4 строки — из его прошлого сообщения, остальное — из следующего). -->
+<script>
+let heroGold = "12" // золота у героя 
+let pickaxeDurability = 3 // прочность кирки
+heroGold=Number(heroGold);
+let orePerHit=7
+let oreInBag = 0 // руды в рюкзаке 
+const oreInBagMax=15;
+let pickaxeHit = 3; // удар киркой 
+
+let orePrice=4; // продажа руды
+// удар 1 
+oreInBag+=orePerHit
+pickaxeDurability--// 
+// удар 2 
+oreInBag+=orePerHit
+pickaxeDurability--
+// удар 3
+oreInBag+=orePerHit
+pickaxeDurability--
+oreInBag=Math.min(oreInBag, oreInBagMax)
+heroGold+=(oreInBag*orePrice)
+console.log (oreInBag)
+console.log(pickaxeDurability)
+console.log (heroGold)
+</script>
