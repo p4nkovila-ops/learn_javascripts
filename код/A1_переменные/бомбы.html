@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Бомбы</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт и комментарии ниже написал ученик (A1, задача «Бомбы», с айфона). Шаги «добыча %» и вывод с подписями — ещё не сделаны. -->
+<script>
+let heroGold="60"; //денег в сумке (текст)
+heroGold=Number(heroGold); 
+
+let bagBombs=1; // бомб в сумке в текущий момент
+const bagBombsMax=4; // максимум бомб в сумке 
+
+let bombBuy=2; // купили бомб 
+const bombPrice=25; // цена бомбы 
+
+const bombDamage=35; // урон бомбы 
+let bombAttack=1; //атака бомбой
+let enemyHp=80;//ХП врага
+
+bagBombs+=bombBuy;
+bagBombs=Math.min(bagBombs, bagBombsMax);
+bagBombs-=bombAttack;
+
+heroGold-=bombPrice*bombBuy;
+
+enemyHp-=bombDamage;
+
+console.log (heroGold);
+console.log (bagBombs);
+console.log (enemyHp);
+</script>
