@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Три зелья</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1: Math.min — потолок здоровья). -->
+<script>
+const heroHpMax=110 
+let heroHp=70
+let heroGold=120
+const potionPrice=40
+const potionHeal=25
+const heroMaxPotion=5
+let heroPotion=0
+heroPotion++
+heroGold-=(3*potionPrice)
+heroHp+= (3*potionHeal)
+heroHp=Math.min(heroHp,heroHpMax)
+console.log (heroHp)
+console.log (heroGold)
+</script>
