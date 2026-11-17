@@ -1,7 +1,7 @@
 <!doctype html>
 <meta charset="utf-8">
 <title>Бомбы</title>
-<!-- заготовка от учителя: страница вокруг скрипта. Скрипт и комментарии ниже написал ученик (A1, задача «Бомбы», с айфона). Шаги «добыча %» и вывод с подписями — ещё не сделаны. -->
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт и комментарии ниже написал ученик (A1, задача «Бомбы», с айфона, итоговая версия). -->
 <script>
 let heroGold="60"; //денег в сумке (текст)
 heroGold=Number(heroGold); 
@@ -24,7 +24,17 @@ heroGold-=bombPrice*bombBuy;
 
 enemyHp-=bombDamage;
 
-console.log (heroGold);
-console.log (bagBombs);
-console.log (enemyHp);
+let loot=23;
+let party=5;
+let heroLoot=0;
+heroLoot=loot%party;
+heroGold+=(heroLoot);
+// Золото: 13// 
+// Бомбы: 2 из 4// 
+// Здоровье врага: 45// 
+// Добыча герою: 3
+console.log (`Золото:${heroGold}`);
+console.log (`Бомбы:${bagBombs} из${bagBombsMax}`);
+console.log (`Здоровье врага: ${enemyHp}`);
+console.log (`Добыча героя ${heroLoot}`);
 </script>
