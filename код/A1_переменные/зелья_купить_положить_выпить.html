@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Зелья: купить, положить, выпить</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт и комментарии ниже написал ученик (A1, последняя рабочая версия). -->
+<script>
+const heroHpMax=110 // хп героя максимальное = 110 
+const heroGoldMax=200 // максимальное количество денег в кошельке
+let heroHp=70 // хп героя в коробке 
+let heroGold=120 // деньги в кошельке героя коробка
+const potionPrice=40 // стоимость зелья (неизменно) 
+const potionHeal=25 // кол-во хп что лечит зелье (неизменно)
+const heroMaxPotion=5 // максимальное количество зелий у героя (неизменно) 
+let heroPotion=0 // сколько зелий у героя изначально 
+let potionBuy=0 // сколько зелий герой купил (в этой коробке нет купленных) но по всей видимости просто создает коробку возможности покупки
+potionBuy++ // пока непонятно зачем пишу но походу кладет еденицу покупки в коробку покупки
+potionBuy=(potionBuy*3) // умножаем нашу еденицу покупки на количество покупок
+let potionUse = 0 // коробка для использования зелий пока 0 использованных
+potionUse++  // создаем еденицу использования 
+heroPotion=(heroPotion+potionBuy-potionUse*3) 
+heroGold=(heroGold-potionBuy*potionPrice)
+heroHp=(heroHp+(potionUse*3)*potionHeal)
+heroHp=Math.min (heroHp, heroHpMax)
+console.log (`Золото: ${heroGold} из:${heroGoldMax}`)
+console.log (`Здоровье:${heroHp} из: ${heroHpMax}`)
+console.log (`Зелий:${heroPotion} из:${heroMaxPotion}`)
+</script>
