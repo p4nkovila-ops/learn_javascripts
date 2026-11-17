@@ -1,7 +1,7 @@
 <!doctype html>
 <meta charset="utf-8">
 <title>Лучник</title>
-<!-- заготовка от учителя: страница вокруг скрипта. Скрипт и комментарии ниже написал ученик (A1, задание «Лучник», последняя рабочая версия). -->
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт и комментарии ниже написал ученик (A1, задание «Лучник», исправленный порядок: купил → потолок → выстрелы). -->
 <script>
 let heroGold = "75" //деньги героя преобразовать в число 
 const heroGoldMax = 120 // максимум денег в кошельке 
@@ -19,10 +19,12 @@ let packBuy=2 // куплено пачек стрел
 let shot = 3 // выстрелов сделано 
 // показать: золото:... Стрелы:... из ... Здоровье врага: 
 
-quiverArrows += packBuy*packArrows-shot
+quiverArrows += packBuy*packArrows
+quiverArrows=Math.min(quiverArrows, quiverArrowsMax)
+quiverArrows=quiverArrows-shot
 heroGold-=packPrice*2
 enemyHp-=shot*ArrowDamage
-quiverArrows=Math.min(quiverArrows, quiverArrowsMax)
+
 
 console.log (`Золото: ${heroGold} из: ${heroGoldMax}`)
 console.log (`Стрелы: ${quiverArrows} из: ${quiverArrowsMax}`)
