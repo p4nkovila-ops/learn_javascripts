@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Зелья — проще</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт и комментарии ниже написал ученик (A1, упрощённая версия). -->
+<script>
+const heroHpMax=110 // хп героя максимальное = 110 
+const heroGoldMax=200 // максимальное количество денег в кошельке
+let heroHp=70 // хп героя в коробке 
+let heroGold=120 // деньги в кошельке героя коробка
+const potionPrice=40 // стоимость зелья (неизменно) 
+const potionHeal=25 // кол-во хп что лечит зелье (неизменно)
+const heroMaxPotion=5 // максимальное количество зелий у героя (неизменно) 
+let heroPotion=0 // сколько зелий у героя изначально 
+let potionBuy=3 // сколько зелий герой купил 
+let potionUse = 3 // использовал зелий 
+heroPotion=(heroPotion+potionBuy-potionUse) 
+heroGold=(heroGold-potionBuy*potionPrice)
+heroHp=(heroHp+(potionUse)*potionHeal)
+heroHp=Math.min (heroHp, heroHpMax)
+console.log (`Золото: ${heroGold} из:${heroGoldMax}`)
+console.log (`Здоровье:${heroHp} из: ${heroHpMax}`)
+console.log (`Зелий:${heroPotion} из:${heroMaxPotion}`)
+</script>
