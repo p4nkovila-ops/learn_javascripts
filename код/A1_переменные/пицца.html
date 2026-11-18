@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Пицца</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1, округление вверх; лишние куски через % — работает не для всех чисел, разбор в чате). -->
+<script>
+"use strict"
+const people=23 // человек
+const slicesPerPerson=2 // нужно кусков на человека
+const slicesPerPizza=8 // кусков в 1 пицце
+let needSlices = people*slicesPerPerson //нужно всего кусков 
+let needPizza = Math.ceil (needSlices/slicesPerPizza) // нужно всего пицц 
+let excessSlices= (needPizza*slicesPerPizza)%needSlices
+console.log (needPizza)
+console.log (excessSlices)
+console.log (needSlices)
+</script>
