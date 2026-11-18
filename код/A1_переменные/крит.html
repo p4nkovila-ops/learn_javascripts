@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Крит</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1, округление: Math.floor и Math.ceil). -->
+<script>
+"use strict"
+const enemyHp = 100 // хп врага
+const baseDamage = 15 // базовый урон
+const critMultiplier = 1.5 // множитель урона
+let critDamage = Math.floor(baseDamage*critMultiplier)
+let quantityHit = Math.ceil(enemyHp/critDamage)
+console.log (critDamage)
+console.log (quantityHit)
+</script>
