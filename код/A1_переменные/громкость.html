@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Громкость</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1, Math.min и Math.max — потолок и пол). -->
+<script>
+"use strict"
+let volume = 60
+let step =25
+let volumeUp=Math.min(100,(step*2+volume))
+console.log (volumeUp)
+let volumeDown=Math.max(0,(volumeUp-step*5))
+console.log(volumeDown)
+</script>
