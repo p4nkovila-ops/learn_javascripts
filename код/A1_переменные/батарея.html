@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Батарея</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1: начальное значение в const, пол и потолок, «изменение = стало − было»). -->
+<script>
+"use strict" 
+const startCharge = 35
+let chargehour=18
+let chargeuse = 7
+let battery=Math.min (100,startCharge+chargehour*4)
+console.log (battery)
+battery =Math.max(0, battery-chargeuse*15)
+console.log (battery)
+console.log (battery-startCharge)
+</script>
