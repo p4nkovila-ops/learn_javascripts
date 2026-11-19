@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Рейд</title>
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1, большая задача «Рейд», первая версия). -->
+<script>
+"use strict"
+let heroGold = "47" //  начальное золото героя 
+let heroHp = 35 // начальное хп героя 
+heroGold = Number(heroGold) // преобразование золота 
+const heroHpMax = 120
+const heroGoldMax = 500
+
+let enemyHp = 260
+
+let swordDamage = 23 // урон наносимый героем 
+let timeHit = 7 //  время затрачиваемое на удар
+let enemyDamage = 9 // урон наносимый врагом 
+
+let tavernHill = 3 // лечение:3 хп за 1 зололта
+let priceHill = 1 // стоимость лечения 3х едениц здоровья 
+let squadLoot = 137 // добыча отряда 
+let squad = 4 // отряд
+let fullPriceHill =  Math.ceil((heroHpMax-heroHp)/3)*priceHill // стоимость полного лечения
+console.log (fullPriceHill) 
+heroHp = Math.min(heroHpMax,(heroHp+fullPriceHill*tavernHill))
+console.log (heroHp)
+
+let hitFrWin = Math.ceil(enemyHp/swordDamage)
+console.log (hitFrWin)
+heroHp-=(hitFrWin-1)*enemyDamage
+console.log (heroHp)
+heroGold=Math.ceil((heroGold-fullPriceHill)+squadLoot/squad)
+console.log (heroGold)
+let timeBattle = (timeHit*hitFrWin)
+console.log (`${(timeBattle-timeBattle%60)/60} мин ${timeBattle%60} сек`)
+</script>
