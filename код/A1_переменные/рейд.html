@@ -1,7 +1,7 @@
 <!doctype html>
 <meta charset="utf-8">
 <title>Рейд</title>
-<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1, большая задача «Рейд», первая версия). -->
+<!-- заготовка от учителя: страница вокруг скрипта. Скрипт ниже написал ученик (A1, большая задача «Рейд», версия 2: доля + остаток через Math.floor). -->
 <script>
 "use strict"
 let heroGold = "47" //  начальное золото героя 
@@ -29,7 +29,7 @@ let hitFrWin = Math.ceil(enemyHp/swordDamage)
 console.log (hitFrWin)
 heroHp-=(hitFrWin-1)*enemyDamage
 console.log (heroHp)
-heroGold=Math.ceil((heroGold-fullPriceHill)+squadLoot/squad)
+heroGold=Math.floor((heroGold-fullPriceHill)+ squadLoot/squad + squadLoot%squad)
 console.log (heroGold)
 let timeBattle = (timeHit*hitFrWin)
 console.log (`${(timeBattle-timeBattle%60)/60} мин ${timeBattle%60} сек`)
